@@ -1,76 +1,96 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>DAO 星秀</title>
-<meta name="description" content="模特展示与经纪服务，写真、商业拍摄、走秀与影视合作。" />
-<link rel="preload" href="styles.css" as="style" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="icon" type="image/png" href="images/favicon.png" />
-<meta property="og:title" content="DAO 星秀"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="images/og-hero.jpg"/>
-<meta property="og:locale" content="zh_CN"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>模特 04 — DAO 星秀</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/logo.png" />
 </head>
 <body>
-  <header class="site-header">
-      <div class="container header-inner">
-        <a href="index.html" class="brand" aria-label="返回首页">
-          <img src="images/logo.png" alt="DAO 星秀 Logo" class="logo" width="140" height="40" decoding="async" />
-        </a>
-        <nav class="nav">
-          <a href="index.html" class="nav-link ">首页</a>
-<a href="models.html" class="nav-link ">模特</a>
-<a href="about.html" class="nav-link ">关于我们</a>
-<a href="contact.html" class="nav-link ">联系我们</a>
-        </nav>
-      </div>
-    </header>
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <nav class="breadcrumb"><a href="index.html">首页</a> / <a href="models.html">模特</a> / 示例模特 4</nav>
-        <h1>示例模特 4</h1>
-        <p class="muted">以下图文均为可替换占位内容。</p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container model-detail">
-        <div class="gallery">
-          <img src="images/models/model-4@1x.jpg"
-               srcset="images/models/model-4@1x.jpg 800w, images/models/model-4@2x.jpg 1600w"
-               sizes="(max-width: 900px) 100vw, 50vw"
-               alt="示例模特 4 作品 1" loading="lazy" decoding="async" width="1200" height="1500"/>
-          <img src="images/models/model-4-b@1x.jpg"
-               srcset="images/models/model-4-b@1x.jpg 800w, images/models/model-4-b@2x.jpg 1600w"
-               sizes="(max-width: 900px) 100vw, 50vw"
-               alt="示例模特 4 作品 2" loading="lazy" decoding="async" width="1200" height="1500"/>
-        </div>
-        <aside class="profile">
-          <ul class="spec">
-            <li><strong>地区：</strong>首尔</li>
-            <li><strong>身高：</strong>172cm</li>
-            <li><strong>三围：</strong>82 / 60 / 88</li>
-            <li><strong>可拍：</strong>写真 / 商业 / 影视</li>
-            <li><strong>语言：</strong>中文 / 韩语</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">预约合作</a>
-        </aside>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2025 DAO 星秀 · 保留所有权利</p>
-    <div class="footer-links">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" class="logo" />
+      <span class="brand-text">DAO 星秀</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">首页</a>
+      <a href="models.html" class="active">模特</a>
       <a href="about.html">关于我们</a>
-      <span aria-hidden="true">·</span>
       <a href="contact.html">联系我们</a>
+      <a href="tel:01058882572" class="call-btn">商务合作</a>
+    </nav>
+    <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">首页</a>
+  <a href="models.html" class="active">模特</a>
+  <a href="about.html">关于我们</a>
+  <a href="contact.html">联系我们</a>
+  <a href="tel:01058882572" class="call-btn">商务合作</a>
+</nav>
+
+<main class="container model-detail">
+
+  <div class="model-detail-left">
+
+    <div class="model-main-photo">
+      <img src="images/model-4.png" id="mainPhoto">
     </div>
+
+    <div class="model-thumbs">
+      <div class="thumb active"><img src="images/model-4.png" onclick="changePhoto('images/model-4.png', this)"></div>
+      <div class="thumb"><img src="images/model-4.png" onclick="changePhoto('images/model-4.png', this)"></div>
+      <div class="thumb"><img src="images/model-4.png" onclick="changePhoto('images/model-4.png', this)"></div>
+    </div>
+
+  </div>
+
+  <div class="model-detail-right">
+    <h1 class="model-detail-name">模特 04</h1>
+
+    <div class="model-detail-info">
+      <p><span>地区：</span><span>——</span></p>
+      <p><span>身高：</span><span>——</span></p>
+      <p><span>体重：</span><span>——</span></p>
+      <p><span>年龄：</span><span>——</span></p>
+      <p><span>备注：</span><span>——</span></p>
+    </div>
+
+    <div class="model-detail-actions">
+      <a href="tel:01058882572" class="call-btn large">电话咨询</a>
+      <a href="contact.html" class="secondary-btn">在线留言</a>
+    </div>
+
+    <div class="model-detail-desc">
+      填写模特介绍内容，此处可留空。
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 DAO 星秀 — 模特展示与经纪服务</p>
   </div>
 </footer>
-<script src="js/main.js" defer></script>
+
+<script src="js/main.js"></script>
+
+<script>
+function changePhoto(url, el) {
+  document.getElementById("mainPhoto").src = url;
+  document.querySelectorAll(".model-thumbs .thumb").forEach(t =>
+    t.classList.remove("active")
+  );
+  el.parentElement.classList.add("active");
+}
+</script>
+
 </body>
 </html>
