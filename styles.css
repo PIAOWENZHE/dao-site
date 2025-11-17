@@ -273,4 +273,179 @@ img {
 /* ===== 模特详情页 ===== */
 .model-detail {
   display: grid;
-  grid-te
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.model-main-photo img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.model-thumbs {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.model-thumbs .thumb {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 6px;
+  opacity: 0.7;
+}
+
+.model-thumbs .thumb img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.model-thumbs .thumb.active {
+  opacity: 1;
+}
+
+.model-detail-name {
+  font-size: 26px;
+  margin-top: 0;
+}
+
+.model-detail-info p {
+  margin: 4px 0;
+}
+
+.model-detail-info span:first-child {
+  width: 60px;
+  color: #666;
+  display: inline-block;
+}
+
+.model-detail-actions {
+  margin: 20px 0;
+  display: flex;
+  gap: 16px;
+}
+
+.secondary-btn {
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+}
+
+.model-detail-desc {
+  margin-top: 12px;
+  color: #555;
+}
+
+
+/* ===== 关于 & 联系页面 ===== */
+.static-page {
+  padding: 50px 0;
+}
+
+.static-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.static-content {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* 联系布局 */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+}
+
+.contact-form .form-row {
+  margin-bottom: 16px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 30px 0;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* ===== 响应式：手机、平板 ===== */
+@media (max-width: 1024px) {
+  .model-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero-slider {
+    height: 36vh;
+  }
+
+  .model-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .model-card img {
+    height: 220px;
+  }
+
+  .model-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .model-page-card img {
+    height: 220px;
+  }
+
+  .model-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .model-main-photo img {
+    height: 360px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
