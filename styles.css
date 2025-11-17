@@ -90,16 +90,28 @@ img {
 /* 移动端菜单按钮 */
 .mobile-menu-btn {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
 }
 
-/* 移动端导航 */
+
+/* ======== 移动端导航（最重要） ======== */
 .mobile-nav {
   display: none;
   flex-direction: column;
   background: #fff;
   border-bottom: 1px solid #eee;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 200px;
+  z-index: 999;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+/* 点击后打开菜单（你的文件缺少这一行） */
+.mobile-nav.active {
+  display: flex;
 }
 
 .mobile-nav a {
